@@ -2,7 +2,7 @@
 
 	function sendMotivation(choice) {
 		ga('set', 'dimension1',choice);
-		ga('send', 'session');
+		ga('send', 'pageview');
 	}
 
 	function closeSurvey() {

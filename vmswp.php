@@ -2,13 +2,20 @@
 
 /*
 Plugin Name: Visitor Motivation Survey
+Plugin URI: https://github.com/spellerberg/vms
+Description: Includes the VMS code in a WordPress site
+Version: 0.1
+Author: Spellerberg Associates
+Author URI: http://spellerbergassociates.com/vms
 */
+
+// Enqueue Scripts
 
 add_action('wp_enqueue_scripts', 'vms_enqueue_scripts');
 
 function vms_enqueue_scripts() {
 
-	$version = "a";
+	$version = "0.1";
 
 	if(!wp_script_is('jquery')) wp_enqueue_script("jquery");
 
@@ -26,10 +33,12 @@ function vms_enqueue_scripts() {
 
 }
 
+// Include Markup
+
 add_filter( 'wp_footer' , 'vms_addhtml' );
 
 function vms_addhtml() {
 
-	include( plugin_dir_path( __FILE__ ) . 'vms.html');
+	include( plugin_dir_path( __FILE__ ) . 'src/vms.html');
 
 }
