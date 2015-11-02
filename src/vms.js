@@ -78,7 +78,7 @@
 			}
 	    });
 
-	    $('.survey a').on('click', function(e) {
+	    $('.survey ul a').on('click', function(e) {
 			e.preventDefault();
 			$('.survey a').removeClass('active');
 			$(this).addClass('active');
