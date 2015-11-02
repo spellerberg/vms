@@ -26,9 +26,9 @@ Disregard the file `vmswp.php`, as it is only used for WordPress. If you already
 
 ### Note the Index of your Custom Definition
 
-When you created your “Motivations” Custom Definition in Google Analytics, it is assigned an integer index. Line four of `src/vms.js` needs to correspond to this index.
+When you created your “Motivations” Custom Definition in Google Analytics, it was assigned an integer index. Line four of `src/vms.js` needs to correspond to this index.
 
-If this is your first Custom Dimension your index will be “1”. In that case you won’t need to change anything.
+If this is your first Custom Dimension your index will be “1”. In that case you won’t need to change anything. Otherwise, update that line so that the integer matches.
 
 ## Contact
 
