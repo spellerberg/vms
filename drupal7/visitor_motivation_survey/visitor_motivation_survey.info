@@ -1,6 +1,0 @@
-name = Visitor Motivation Survey
-description = An implementation of the VMS for Marty Spellerberg and Sarah Wambold's research for Museums on the Web 2016
-core = 7.x
-stylesheets[all][] = vms.css
-scripts[] = vms.js
-scripts[] = js.cookie.js

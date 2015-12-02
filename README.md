@@ -16,9 +16,15 @@ From there, please feel free to modify, refactor or re-write any code you wish. 
 
 ## Installation
 
-### WordPress Users Have It Easy
+### WordPress Plugin
 
 The sample code has been prepared for easy installation as a WordPress plugin. Download the package, upload and activate. You should see the assets enqueued and the survey attached to the bottom of the window.
+
+### Drupal 7 Module
+
+Chris Brown of the YBCA has contributed a Drupal 7 module of the VMS. It's available here:
+
+https://github.com/spellerberg/vms/tree/drupal7
 
 ### Other Platforms
 
