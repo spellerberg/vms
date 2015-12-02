@@ -6,15 +6,7 @@ The action is in the JS file, especially the sendMotivation function: This is wh
 
 The repo also contains copies of jQuery and js.cookie, in case you don't already use them.
 
-## Customizations
-
-This sample code is meant to provide an example of how the VMS may be implemented. You are encouraged to customize it for integration into your website.
-
-You must change the markup in `src/vms.html` to specify the name of your institution (in two places) and the href of the contact link. You should also customize the CSS to match your site's fonts and colors. 
-
-From there, please feel free to modify, refactor or re-write any code you wish. We ask only that the interface and language presented to the user remain consistent, to facilitate comparison of results across institutions.
-
-## Installation
+## Installation / Versions
 
 ### WordPress Plugin
 
@@ -26,9 +18,23 @@ Chris Brown of the YBCA has contributed a Drupal 7 module of the VMS. It's avail
 
 https://github.com/spellerberg/vms/tree/drupal7
 
+### Google Tag Manager
+
+Tushar Samant of the Chicago Architecture Foundation has contributed a version customized for Google Tag Manager. It's available here:
+
+https://github.com/spellerberg/vms/tree/tagmanager
+
 ### Other Platforms
 
 Disregard the file `vmswp.php`, as it is only used for WordPress. If you already include jQuery, there's no need to include the provided copy. Integrate the other files into your templates. Minify and GZIP as desired.
+
+## Customizations
+
+This sample code is meant to provide an example of how the VMS may be implemented. You are encouraged to customize it for integration into your website.
+
+You must change the markup in `src/vms.html` to specify the name of your institution (in two places) and the href of the contact link. You should also customize the CSS to match your site's fonts and colors. 
+
+From there, please feel free to modify, refactor or re-write any code you wish. We ask only that the interface and language presented to the user remain consistent, to facilitate comparison of results across institutions.
 
 ### Note the Index of your Custom Definition
 
