@@ -1,27 +1,27 @@
 (function($) {
 
 	function sendMotivation(choice) {
-		ga('set', 'dimension1',choice);
-		ga('send', 'pageview');
+		if ($.type(window.ga) === "function") {
+			var tracker = window.ga.getAll()[0].get('name');
+			window.ga(tracker + '.set', 'dimension1', choice);
+			window.ga(tracker + '.send', 'pageview');
+		}
 	}
 
 	function closeSurvey() {
 
-		if ( $(".mquery").css("float") == "left" ) {
+		if ( $(".mquery").css("float") === "left" ) {
 			$('.vms').stop().slideUp('fast');
 		} else {
 			$('.vms').hide();
 		}
 
-		Cookies.set('hidevms', 'true');
-
+		$.cookie('hidevms', 'on');
 	}
 
-	$(document).ready( function() {
+	function init() {
 
-		var hidevms = Cookies.get('hidevms');
-
-		if ( typeof hidevms != 'undefined' ) {
+		if ( $.cookie('hidevms') === 'on' ) {
 			$('.vms').hide();
 		}
 
@@ -33,7 +33,7 @@
 				$('.dismiss').hide();
 				$('.shrink').show();
 
-				if ( $(".mquery").css("float") == "left" ) {
+				if ( $(".mquery").css("float") === "left" ) {
 					$('.survey').stop().slideDown('fast');
 				} else {
 					$('.survey').show();
@@ -44,7 +44,7 @@
 
 		$('.shrink').on('click', function() {
 
-			if ( $(".mquery").css("float") == "left" ) {
+			if ( $(".mquery").css("float") === "left" ) {
 
 				$('.survey').stop().slideUp('fast', function() {
 					$('.shrink').hide();
@@ -98,7 +98,7 @@
 			e.preventDefault();
 			$(this).removeClass('clickable');
 
-			if ( $(".mquery").css("float") == "left" ) {
+			if ( $(".mquery").css("float") === "left" ) {
 				$('.infotext').slideDown('fast');
 			} else {
 				$('.infotext').show();
@@ -133,6 +133,12 @@
 			sendMotivation('Professional');
 		});
 
-	});
+	}
+
+	// Hook into main init routine
+	Site.onInit.push(init);
+	return {
+		init: init
+	};
 
 })(jQuery);
