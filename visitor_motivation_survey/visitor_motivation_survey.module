@@ -31,6 +31,7 @@ function visitor_motivation_survey_help($path, $arg) {
 
 
 function visitor_motivation_survey_page_alter(&$page) {
+    if (!path_is_admin(current_path())) {
 	$page['content']['vms'] = array(
             '#markup' =>  '
 		<div class="vms">
@@ -60,4 +61,6 @@ function visitor_motivation_survey_page_alter(&$page) {
 		  ',
 		  '#weight' => 120
 		);   
+    }
+
 }
