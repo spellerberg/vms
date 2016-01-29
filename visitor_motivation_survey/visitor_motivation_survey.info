@@ -4,3 +4,4 @@ core = 7.x
 stylesheets[all][] = vms.css
 scripts[] = vms.js
 scripts[] = js.cookie.js
+dependencies[] = jquery_update
