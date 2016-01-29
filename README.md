@@ -7,7 +7,7 @@ To use this module, your website will need to be using jQuery 1.7 or above.
 
 ## DEPENDENCIES
 
-This module is dependent on the jQuery update module. https://www.drupal.org/project/jquery_updates
+This module is dependent on the jQuery update module. https://www.drupal.org/project/jquery_update
 
 ## HOW TO INSTALL:
 
